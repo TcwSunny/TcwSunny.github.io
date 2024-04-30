@@ -16,7 +16,7 @@
 title: SunnyTeng
 description: > # this means to ignore newlines until "baseurl:"
   Java工程師
-baseurl: "/TcwSunny"
+baseurl: ""
 url: "https://TcwSunny.github.io"
 permalink: /:year/:month/:day/:title
 repository: TcwSunny/TcwSunny.github.io
