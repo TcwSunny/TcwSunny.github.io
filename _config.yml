@@ -21,7 +21,7 @@ url: "https://TcwSunny.github.io"
 permalink: /:year/:month/:day/:title
 repository: TcwSunny/TcwSunny.github.io
 paginate: 5
-image_baseurl: "https://github.com/TcwSunny/TcwSunny.github.io/blob/main/assets/res/
+image_baseurl: "https://github.com/TcwSunny/TcwSunny.github.io/blob/main/assets/res/"
 
 # MatJek specific configurations
 github_profile: "https://github.com/dashboard"
