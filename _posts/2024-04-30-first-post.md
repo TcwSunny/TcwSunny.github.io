@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "《JDBC專題》0. 系列文簡介"
-date:   2024-4-30 20:17:00 +0800
+date:   2024-4-30 20:17:00 +0000
 categories: coding introduction
 tags: JDBC
 comments: 1
