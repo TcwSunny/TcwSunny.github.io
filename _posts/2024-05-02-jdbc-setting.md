@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "《JDBC專題》0. 系列文簡介"
-date:   2024-4-30 20:17:00 +0000
+title:  "《JDBC專題》1. 系統設定：使用JDBC的前置作業
+"
+date:   2024-5-1 22:35:00 +0000
 categories: coding introduction
 tags: JDBC
 comments: 1
