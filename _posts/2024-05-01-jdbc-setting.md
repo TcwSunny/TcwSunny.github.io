@@ -9,7 +9,7 @@ published: true
 ---
 >JDBC提供API讓JAVA使用者能夠透過程式訪問資料庫，這篇文章是在說明撰寫JDBC前的系統設定，step by step 教你如何設定資料庫與防火牆
 
-#### 事前準備
+#### **事前準備**
 
 * 下載eclipse和SSMS和SQL server
 * 確保以上都可以正常運作
