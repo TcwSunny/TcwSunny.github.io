@@ -5,6 +5,7 @@ date:   2024-5-1 22:35:00 +0000
 categories: coding introduction
 tags: JDBC
 comments: 1
+published: true
 ---
 >JDBC提供API讓JAVA使用者能夠透過程式訪問資料庫，這篇文章是在說明撰寫JDBC前的系統設定，step by step 教你如何設定資料庫與防火牆
 
@@ -18,18 +19,18 @@ comments: 1
 ### 打開SSMS
 
 1. 打開SSMS，在資料庫的地方右鍵新增資料庫
-![打開SSMS，在資料庫的地方右鍵新增資料庫](https://github.com/TcwSunny/TcwSunny.github.io/blob/main/assets/res/2024-05-01-jdbc-setting-res/image.png?raw=true)
+![打開SSMS，在資料庫的地方右鍵新增資料庫]({{ site.image_baseurl }}/2024-05-01-jdbc-setting-res/image.png?raw=true)
 
-2. 打上資料庫名稱後按確定
-![打上資料庫名稱後按確定](https://github.com/TcwSunny/TcwSunny.github.io/blob/main/assets/res/2024-05-01-jdbc-setting-res/image-1.png?raw=true)
+1. 打上資料庫名稱後按確定
+![打上資料庫名稱後按確定]({{ site.image_baseurl }}/2024-05-01-jdbc-setting-res/image-1.png?raw=true)
 
-3. 在”安全性” “登入”中新增一筆登入
+1. 在”安全性” “登入”中新增一筆登入
 ![在”安全性” “登入”中新增一筆登入](https://github.com/TcwSunny/TcwSunny.github.io/blob/main/assets/res/2024-05-01-jdbc-setting-res/image-2.png?raw=true)
 
-4. 輸入登入名稱->勾選SQL server驗證後輸入密碼
+1. 輸入登入名稱->勾選SQL server驗證後輸入密碼
 ![輸入登入名稱->勾選SQL server驗證後輸入密碼](https://github.com/TcwSunny/TcwSunny.github.io/blob/main/assets/res/2024-05-01-jdbc-setting-res/image-3.png?raw=true)
 
-5. 使用者對應中選擇剛剛建立的資料庫->下面勾選db_owner->按確定
+1. 使用者對應中選擇剛剛建立的資料庫->下面勾選db_owner->按確定
 ![使用者對應中選擇剛剛建立的資料庫](..\assets\res\2024-05-01-jdbc-setting-res\image-4.png?raw=true)
 
 ### SQL server設定管理員
