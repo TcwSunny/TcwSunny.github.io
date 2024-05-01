@@ -5,6 +5,7 @@ date:   2024-5-1 22:41:00 +0000
 categories: coding introduction
 tags: JDBC
 comments: 1
+published: false
 ---
 >在執行SQL語句前需要建立Connection和Statement，這篇會介紹建立connection的2種方法：直接建立connection及connection pool
 
