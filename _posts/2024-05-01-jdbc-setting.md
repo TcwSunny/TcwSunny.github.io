@@ -18,18 +18,18 @@ comments: 1
 ### 打開SSMS
 
 1. 打開SSMS，在資料庫的地方右鍵新增資料庫
-![打開SSMS，在資料庫的地方右鍵新增資料庫](..\assets\res\2024-05-01-jdbc-setting-res\image.png)
+![打開SSMS，在資料庫的地方右鍵新增資料庫](image.png)
 
-2. 打上資料庫名稱後按確定
+1. 打上資料庫名稱後按確定
 ![打上資料庫名稱後按確定](..\assets\res\2024-05-01-jdbc-setting-res\image-1.png)
 
-3. 在”安全性” “登入”中新增一筆登入
+1. 在”安全性” “登入”中新增一筆登入
 ![在”安全性” “登入”中新增一筆登入](..\assets\res\2024-05-01-jdbc-setting-res\image-2.png)
 
-4. 輸入登入名稱->勾選SQL server驗證後輸入密碼
+1. 輸入登入名稱->勾選SQL server驗證後輸入密碼
 ![輸入登入名稱->勾選SQL server驗證後輸入密碼](..\assets\res\2024-05-01-jdbc-setting-res\image-3.png)
 
-5. 使用者對應中選擇剛剛建立的資料庫->下面勾選db_owner->按確定
+1. 使用者對應中選擇剛剛建立的資料庫->下面勾選db_owner->按確定
 ![使用者對應中選擇剛剛建立的資料庫](..\assets\res\2024-05-01-jdbc-setting-res\image-4.png)
 
 ### SQL server設定管理員
