@@ -21,7 +21,7 @@ comments: 1
 ![打開SSMS，在資料庫的地方右鍵新增資料庫](https://github.com/TcwSunny/TcwSunny.github.io/blob/main/assets/res/2024-05-01-jdbc-setting-res/image.png)
 
 1. 打上資料庫名稱後按確定
-![打上資料庫名稱後按確定](https://github.com/TcwSunny/TcwSunny.github.io/blob/main/assets/res/2024-05-01-jdbc-setting-res/image-1.png)
+![打上資料庫名稱後按確定](https://github.com/TcwSunny/TcwSunny.github.io/blob/main/assets/res/2024-05-01-jdbc-setting-res/image-1.png?raw=true)
 
 1. 在”安全性” “登入”中新增一筆登入
 ![在”安全性” “登入”中新增一筆登入](https://github.com/TcwSunny/TcwSunny.github.io/blob/main/assets/res/2024-05-01-jdbc-setting-res/image-2.png)
