@@ -15,7 +15,8 @@ published: true
 
 在建立connection時需要前一篇設定的帳號密碼進行登入，因為這個功能之後會很常用到，所以建議直接建一個工具class，在裡面新增static函式
 
-1. 首先需要建立一個preperties檔
+### 首先需要建立一個preperties檔
+
   檔名叫XXXX.properties(範例叫jdbc.properties)，裡面放url、user和password三個參數
 
   {% highlight properties linenos %}
@@ -25,7 +26,8 @@ published: true
   {% endhighlight %}
 
   建在properties是為了讓其他使用者更方便修改，不然讓別人動code是一件有點危險的事，如果沒有這個需求也可以直接寫在code裡面
-2. 開始建立connection，程式如下
+
+### 開始建立connection，程式如下
 
   {% highlight java linenos %}
   public class JDBCutil {
@@ -35,7 +37,7 @@ published: true
       try {
         //註冊JDBC驅動程式
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        
+
         //讀properties檔案，取出帳號密碼
         Properties properties = new Properties();
         fileInputStream = new FileInputStream(new File("你的properties位置"));
@@ -70,7 +72,9 @@ published: true
     }
   }
   {% endhighlight %}
-3. 在使用完connection後需要關閉連線
+
+### 在使用完connection後需要關閉連線
+
   可以在工具class底下新增closeResource()，這邊我會使用overload的方式把statement和resultset(請見下篇)的關閉函式一起寫好
   {% highlight java linenos %}
   Statement statement = null;
@@ -113,7 +117,9 @@ published: true
     }
   }
   {% endhighlight %}
-4. 在main裡面呼叫函式JDBCutil.getConnection()
+
+### 在main裡面呼叫函式JDBCutil.getConnection()
+
   執行後如果看到”連線狀態true”表示連線成功
   {% highlight java linenos %}
   public static void main(String[] args) {
@@ -128,7 +134,8 @@ published: true
 
 [下載連結](https://www.mchange.com/projects/c3p0/)：滑到下面installation下載c3p0–0.10.0.jar 和mchange-commons-java-0.3.0.jar(有最新版就下載最新版)，然後加到build path中
 
-1. 以下是getConnection的實作方式
+### 以下是getConnection的實作方式
+
   可以看到我在openDataSource中開了一個連接池，並將帳號密碼設定好，接著用一個變數代表連接池(dataSource)，然後在getConnection的地方把connection取出並回傳，這裡我直接把exception丟出，如果要在函式中直接try catch也是可以。
   {% highlight java linenos %}
   public static ComboPooledDataSource openDataSource() {
@@ -151,7 +158,9 @@ published: true
       return dataSource.getConnection();
     }
   {% endhighlight %}
-2. 然後就是關連結的函式，一樣使用overload
+
+### 然後就是關連結的函式，一樣使用overload
+
   {% highlight java linenos %}
   public static void release(Connection connection) {
     try {
@@ -192,4 +201,5 @@ published: true
     }
   }
   {% endhighlight %}
+  
 測試連線成功後就可以開始建statement和跑SQL程式了!!!(下篇待續)
