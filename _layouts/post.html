@@ -11,7 +11,8 @@ js: ["post.js"]
         <span>
           <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Date">date_range</i>
           {{page.date | date: "%d/%m/%Y %H:%M"}}
-          <i id="indicate" class="right material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Show extra info">info</i>
+          <i id="indicate" class="right material-icons tooltipped" data-position="left" data-delay="30"
+            data-tooltip="Show extra info">info</i>
         </span>
       </div>
       <div class="collapsible-body">
@@ -20,7 +21,9 @@ js: ["post.js"]
           {% for cat in page.categories %}
           {% capture test %}{{cat | slice: 0}}{% endcapture %}
           {% capture testup %}{{cat | slice: 0 | upcase}}{% endcapture %}
-          <a href="{{site.baseurl}}/categories#{{cat | slugify}}{% if test == testup %}_cap{% endif %}" target="_blank"><div class="chip">{{cat}}</div></a>
+          <a href="{{site.baseurl}}/categories#{{cat | slugify}}{% if test == testup %}_cap{% endif %}" target="_blank">
+            <div class="chip">{{cat}}</div>
+          </a>
           {% endfor %}
         </span>
         <span>
@@ -28,7 +31,9 @@ js: ["post.js"]
           {% for tag in page.tags %}
           {% capture test %}{{tag | slice: 0}}{% endcapture %}
           {% capture testup %}{{tag | slice: 0 | upcase}}{% endcapture %}
-          <a href="{{site.baseurl}}/tags#{{tag | slugify}}{% if test == testup %}_cap{% endif %}" target="_blank"><div class="chip">{{tag}}</div></a>
+          <a href="{{site.baseurl}}/tags#{{tag | slugify}}{% if test == testup %}_cap{% endif %}" target="_blank">
+            <div class="chip">{{tag}}</div>
+          </a>
           {% endfor %}
         </span>
       </div>
@@ -37,7 +42,7 @@ js: ["post.js"]
 </div>
 <div class="divider"></div>
 <div class="row">
-  <div class="col s12">
+  <div class="col s12" id="post-content">
     {{ content }}
   </div>
 </div>
@@ -48,12 +53,13 @@ js: ["post.js"]
     this.page.url = "{{site.url}}{{site.baseurl}}{{page.url}}";
     this.page.identifier = "{{page.id}}";
   };
-  (function() { // DON'T EDIT BELOW THIS LINE
+  (function () { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
     s.src = '//{{site.disqus_shortname}}.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
   })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
 {% endif %}
