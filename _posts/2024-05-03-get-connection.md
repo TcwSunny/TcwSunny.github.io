@@ -9,7 +9,7 @@ published: true
 ---
 >在執行SQL語句前需要建立Connection和Statement，這篇會介紹建立connection的2種方法：直接建立connection及connection pool
 
-實作這一篇之前請先確認系統設定都正確，還沒設定的請看[上一篇](https://tcwsunny.github.io/2024/05/01/jdbc-setting)
+實作這一篇之前請先確認系統設定都正確，還沒設定的請看[上一篇][上一篇]
 
 ## 建立connection：直接連線
 
@@ -132,7 +132,7 @@ published: true
 
 連接池是在系統執行時建立多個連結，需要用時把連結拿來使用，用完後再放回池子中，而連接池也是我在這次專題中主要使用的方法，以下code是示範連接池工具中如何getConnection，使用的是c3p0套件
 
-[下載連結](https://www.mchange.com/projects/c3p0/)：滑到下面installation下載c3p0–0.10.0.jar 和mchange-commons-java-0.3.0.jar(有最新版就下載最新版)，然後加到build path中
+> [下載連結][下載連結]：滑到下面installation下載c3p0–0.10.0.jar 和mchange-commons-java-0.3.0.jar(有最新版就下載最新版)，然後加到build path中
 
 ### 以下是getConnection的實作方式
 
@@ -201,5 +201,9 @@ published: true
     }
   }
   {% endhighlight %}
-  
+
 測試連線成功後就可以開始建statement和跑SQL程式了!!!(下篇待續)
+
+
+[下載連結]: https://www.mchange.com/projects/c3p0/
+[上一篇]: https://tcwsunny.github.io/2024/05/01/jdbc-setting
