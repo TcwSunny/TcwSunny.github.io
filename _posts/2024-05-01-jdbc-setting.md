@@ -9,14 +9,14 @@ published: true
 ---
 >JDBC提供API讓JAVA使用者能夠透過程式訪問資料庫，這篇文章是在說明撰寫JDBC前的系統設定，step by step 教你如何設定資料庫與防火牆
 
-#### 事前準備
+## 事前準備
 
 * 下載eclipse和SSMS和SQL server
 * 確保以上都可以正常運作
 
-#### 開始設定
+## 開始設定
 
-##### 打開SSMS
+### 打開SSMS
 
 * 打開SSMS，在資料庫的地方右鍵新增資料庫
 
@@ -38,7 +38,7 @@ published: true
 
 ![使用者對應中選擇剛剛建立的資料庫]({{ site.image_baseurl }}\2024-05-01-jdbc-setting-res\image-4.png?raw=true)
 
-##### SQL server設定管理員
+### SQL server設定管理員
 
 * 打開SQL server設定管理員
 
@@ -52,7 +52,7 @@ published: true
 
 ![在TCP/IP再按一次右鍵]({{ site.image_baseurl }}\2024-05-01-jdbc-setting-res\image-7.png?raw=true)
 
-##### Windows防火牆
+### Windows防火牆
 
 * 打開windows defender防火牆(不要開錯!!!)->進階設定
 
@@ -78,7 +78,7 @@ published: true
 
 ![輸入名稱SQL Server->完成]({{ site.image_baseurl }}\2024-05-01-jdbc-setting-res\image-13.png?raw=true)
 
-##### 再次打開SSMS
+### 再次打開SSMS
 
 * 最上層右鍵屬性
 
@@ -88,7 +88,7 @@ published: true
 
 ![安全性]({{ site.image_baseurl }}\2024-05-01-jdbc-setting-res\image-15.png?raw=true)
 
-##### 回到SQL Server設定管理員
+### 回到SQL Server設定管理員
 
 * 右鍵將資料庫重新啟動
 
