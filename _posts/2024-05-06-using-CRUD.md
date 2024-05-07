@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "《JDBC專題》3. 製作CRUD功能"
-date:   2024-5-6 00:23:33 +0000
+date:   2024-5-6 23:33:00 +0000
 categories: coding
 tags: JDBC
 comments: 1
