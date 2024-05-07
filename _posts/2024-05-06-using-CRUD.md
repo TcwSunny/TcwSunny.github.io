@@ -65,7 +65,7 @@ public class ExchangeRate {
 以上三個功能其實基本概念都一樣，這邊使用新增來當作範例，因為這裡輸入是直接用ExchangeRate的List，代表一次會執行多筆插入，所以也會示範使用Batch的方式以節省時間。
 
 {% highlight java linenos %}
-public void InsertExchangeRate(List\<ExchangeRate> erList) {
+public void InsertExchangeRate(List<ExchangeRate> erList) {
 
     //建立SQL語句，這邊先判斷插入的資料是否重複，若沒有重複則insert
     //問號的地方是prepareStatement需要加入變數的位置
@@ -137,7 +137,7 @@ public void InsertExchangeRate(List\<ExchangeRate> erList) {
 查詢語句較不一樣的地方是執行時需要使用executeQuery，且會回傳resultSet，需要將resultSet中的資料進行整理。
 
 {% highlight java linenos %}
-public List\<ExchangeRate> selectAll() {
+public List<ExchangeRate> selectAll() {
 
     //以下步驟同增刪改，但需要多一個resultSet去接住回傳的資料
     String sql = "SELECT * FROM exchangeRate ORDER BY name,date";
@@ -152,7 +152,7 @@ public List\<ExchangeRate> selectAll() {
         resultSet = preparedStatement.executeQuery();
 
         //建立準備回傳的list
-        List\<ExchangeRate> list = new ArrayList\<ExchangeRate>();
+        List<ExchangeRate> list = new ArrayList<ExchangeRate>();
 
         //當有下一筆resultSet時讀取下一筆
         while (resultSet.next()) {
