@@ -5,7 +5,7 @@ date:   2024-5-8 19:06:00 +0000
 categories: coding
 tags: JDBC
 comments: 1
-published: false
+published: true
 ---
 > 本文會介紹此專題讀取資料的方法，以及如何運用簡易爬蟲抓取匯率資料
 
@@ -85,3 +85,52 @@ public static String getJsonData(String dataPath) {
     return jsonBuilder.toString();
 }
 {% endhighlight %}
+
+這樣就可以產生一整個Json字串，之後再將字串使用GSON解析即可（這部分會在service介紹）。
+
+### Jsoup爬蟲
+
+這邊會分為兩個含式，getNowData是爬取當日資料，而getPastData則是爬單一幣別整個月的資料（datTime為月份、name不為空）或是過去的單日資料（datTime為日期、name為空字串）。
+
+{% highlight java linenos %}
+public static String[] getNowData() {
+    String[] dataList = null;
+    try {
+
+        //使用Jsoup抓取網路資料
+        Document document = Jsoup.connect("https://rate.bot.com.tw/xrt/flcsv/0/day").get();
+
+        //print出來後可以發現資料都包在body中，所以使用body().text()取出內部文字
+        //<html>
+        //    <head></head>
+        //    <body>
+        //        幣別,匯率,現金,即期,遠期10天...
+        //    </body>
+        //</html>
+        String body = document.body().text();
+
+        //因為在不同筆中間是用空格隔開，因此使用split就可以將字串轉換為String的陣列
+        dataList = body.split(" ");
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    return dataList;
+}
+
+//getPastData也是使用一樣的方法，只是爬取網址不同
+public static String[] getPastData(String name, String dayTime) {
+    String[] dataList = null;
+    try {
+        Document document = Jsoup.connect("https://rate.bot.com.tw/xrt/flcsv/0/"+dayTime+"/"+name).get();
+        String body = document.body().text();
+        dataList = body.split(" ");
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    return dataList;
+}
+{% endhighlight %}
+
+這樣就可以回傳String陣列，再使用service處理相應的格式變成物件即可。
+
+取得資料後，下一篇會分享我如何將回傳的資料轉換為物件。
